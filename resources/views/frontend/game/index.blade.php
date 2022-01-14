@@ -10,6 +10,9 @@
             </div>
         </div>
     </section>
+    @if(!empty($breadcrumbs))
+        @include('components.breadcrumbs')
+    @endif
     <section class="game container">
         <div class="card text-center">
             <div class="card-header">
@@ -20,7 +23,6 @@
             </div>
         </div>
     </section>
-
     <script type="text/javascript" src="{{ asset('js/game.js') }}" defer></script>
     <!-- END section -->
 </x-site-layout>

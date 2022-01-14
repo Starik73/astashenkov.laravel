@@ -14,8 +14,10 @@
             </div>
         </div>
     </section>
+    @if(!empty($breadcrumbs))
+        @include('components.breadcrumbs', ['title' => $blog->title])
+    @endif
     <!-- END section -->
-
     <section class="site-section bg-light py-2 card">
         <h4 class="text-center py-3">{{ $blog->title }}</h4>
         <div class="container border bg-white card-body">

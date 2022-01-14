@@ -9,6 +9,9 @@
                 </div>
             </div>
         </div>
+        @if(!empty($breadcrumbs))
+            @include('components.breadcrumbs')
+        @endif
     </section>
     <!-- END section -->
 </x-site-layout>

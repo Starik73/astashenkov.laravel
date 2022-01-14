@@ -15,7 +15,7 @@ abstract class NavMenuEnum
                 'backend.php'     => 'PHP',
             ],
         ],
-       'info'         => 'Магазин',
+        'backend.shop' => 'Магазин',
     ];
     const SITE_NAV_MENU = [
         'index'      => 'Главная',
@@ -28,6 +28,18 @@ abstract class NavMenuEnum
                 'courses.php'     => 'PHP',
             ],
         ],
+        'info'       => 'Информация',
+        'game'       => 'Игра',
+        'contact'    => 'Контакты'
+    ];
+    const BREAD_CRUMBS = [
+        'index'      => 'Главная',
+        'blog'       => 'Блог',
+        'courses'    => 'Онлайн уроки',
+        'html'       => 'HTML',
+        'js'         => 'JavaScript',
+        '.css'       => 'CSS',
+        'php'        => 'PHP',
         'info'       => 'Информация',
         'game'       => 'Игра',
         'contact'    => 'Контакты'

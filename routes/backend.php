@@ -6,6 +6,7 @@ use App\Http\Controllers\BackEnd\CoursesCssController;
 use App\Http\Controllers\BackEnd\CoursesJsController;
 use App\Http\Controllers\BackEnd\CoursesPhpController;
 use App\Http\Controllers\BackEnd\AdminController;
+use App\Http\Controllers\BackEnd\Shop\ShopController;
 use Illuminate\Support\Facades\Route;
 
 // Admin
@@ -74,5 +75,10 @@ Route::prefix('backend')->group(function () {
                 ->middleware(['auth'])
                 ->name('php_update');
         });
+
+        // Shop
+        Route::get('/shop', [ShopController::class, 'index'])
+            ->middleware(['auth'])
+            ->name('shop');
     });
 });

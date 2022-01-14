@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/my_admin_style.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/my_style.css') }}">
         <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
         <!-- Scripts -->
         <script type="text/javascript" src="{{ asset('js/app.js') }}" defer></script>
@@ -22,8 +24,14 @@
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
             @include('layouts.navigation', ['nav_menu' => $nav_menu ?? []])
-            <div class="container">
-                @include('backend.components.flash-message')
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 offset-md-8">
+                        <div class="absolute">
+                            @include('components.flash-message')
+                        </div>
+                    </div>
+                </div>
             </div>
             @if (!empty($header))
             <!-- Page Heading -->

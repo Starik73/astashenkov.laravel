@@ -1,5 +1,5 @@
 <header role="banner">
-    <nav class="navbar navbar-expand-md navbar-dark bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
         <div class="container">
             <a class="navbar-brand" href="{{ route('index') }}">
                 Astashenkov
@@ -25,7 +25,4 @@
         </div>
     </nav>
 </header>
-<div class="container">
-
-</div>
 <!-- END header -->

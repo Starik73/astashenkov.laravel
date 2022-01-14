@@ -13,6 +13,9 @@
                 </div>
             </div>
         </div>
+        @if(!empty($breadcrumbs))
+            @include('components.breadcrumbs', ['title' => $blog->title])
+        @endif
     </section>
     <!-- END section -->
 

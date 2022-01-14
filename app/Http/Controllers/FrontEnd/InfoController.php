@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\FrontEnd;
 
+use Illuminate\Http\Request;
+
 class InfoController extends BaseFrontEndController
 {
     /**

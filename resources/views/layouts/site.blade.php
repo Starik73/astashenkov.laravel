@@ -20,6 +20,7 @@
         <meta property="og:site_name" content="{{ $og_site_name ?? 'Блог о программировании. Асташенков Алексей. HTML, CSS, JS, PHP, Laravel' }}"/>
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/my_style.css') }}">
         <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
         <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
         <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
@@ -44,8 +45,17 @@
         <link rel="shortcut icon" href="{{ route('index') . '/favicon.ico' }}" />
     </head>
     <body>
-        @include('frontend.common.navigation')
-        {{ $slot }}
-        @include('frontend.common.footer')
+        <div class="row-fluid">
+            @include('frontend.common.navigation')
+            <div class="container">
+                <div class="col-md-4 offset-md-8">
+                    <div class="absolute mt-5">
+                        @include('components.flash-message')
+                    </div>
+                </div>
+            </div>
+            {{ $slot }}
+            @include('frontend.common.footer')
+        </div>
     </body>
 </html>

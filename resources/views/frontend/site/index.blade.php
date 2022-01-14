@@ -17,6 +17,9 @@
         </div>
     </section>
     <!-- END section -->
+    @if(!empty($breadcrumbs))
+        @include('components.breadcrumbs')
+    @endif
     <!-- School-features section -->
     <section class="school-features d-flex" style="background-image: url({{ asset('images/big_image_3.jpg') }}); opacity:0.9;">
         <div class="container-fluid mx-5">

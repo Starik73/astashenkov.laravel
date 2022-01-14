@@ -9,6 +9,9 @@
                 </div>
             </div>
         </div>
+        @if(!empty($breadcrumbs))
+            @include('components.breadcrumbs')
+        @endif
     </section>
     <!-- END section -->
     <section class="site-section bg-light">

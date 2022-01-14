@@ -15,7 +15,7 @@ class BlogController extends BaseFrontEndController
     {
         $blogs = Blog::orderByDesc('id')
             ->paginate(self::ITEMS_PER_PAGE);
-        return view('frontend.blog.index', compact('blogs'));
+        return view('frontend.blog.index', compact('blogs'))->with('success', 'string');
     }
 
     /**

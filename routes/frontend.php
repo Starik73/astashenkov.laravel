@@ -54,9 +54,13 @@ Route::prefix('courses')->group(function () {
 Route::get('/info', [InfoController::class, 'index'])
     ->name('info');
 
-// InfoController
+// GameController
 Route::get('/game', [GameController::class, 'index'])
     ->name('game');
+
+// ShopController
+Route::get('/shop', [ShopController::class, 'index'])
+    ->name('shop');
 
 // ContactController
 Route::get('/contact', [ContactController::class, 'index'])
