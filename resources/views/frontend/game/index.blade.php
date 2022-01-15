@@ -14,15 +14,31 @@
         @include('components.breadcrumbs')
     @endif
     <section class="game container">
-        <div class="card text-center">
-            <div class="card-header">
-                <span class="btn" id="startgame">Играть</span>
+        <div class="row">
+            <div class="col-6">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <span class="btn" id="startgame">Играть "The bird"</span>
+                    </div>
+                    <div class="card-body mx-auto">
+                        <canvas id="canvas" class="border" width="288" height="512"></canvas>
+                    </div>
+                </div>
             </div>
-            <div class="card-body mx-auto">
-                <canvas id="canvas" class="border" width="288" height="512"></canvas>
+            <div class="col-6">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <span class="btn" id="play_bejeweled">Играть Три в ряд</span>
+                    </div>
+                    <div class="card-body mx-auto" width="288" height="512">
+                        <div id="gamefield" class="border"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <script type="text/javascript" src="{{ asset('js/game.js') }}" defer></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.touchSwipe.min.js') }}" defer></script>
+    <script type="text/javascript" src="{{ asset('js/bejeweled.js') }}" defer></script>
     <!-- END section -->
 </x-site-layout>
