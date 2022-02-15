@@ -12,8 +12,20 @@ use App\Http\Controllers\FrontEnd\GameController;
 use App\Http\Controllers\FrontEnd\InfoController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', function () {
+    return view('frontend.squad.index');
+})->name('squad');
+
+Route::get('/single', function () {
+    return view('frontend.squad.single');
+})->name('single');
+
+Route::get('/image', function () {
+    return view('frontend.squad.image');
+})->name('image');
+
 // SiteController
-Route::get('/', [SiteController::class, 'index'])
+Route::get('/index', [SiteController::class, 'index'])
     ->name('index');
 
 // BlogController
@@ -53,6 +65,9 @@ Route::prefix('courses')->group(function () {
 // InfoController
 Route::get('/info', [InfoController::class, 'index'])
     ->name('info');
+
+Route::get('/info.getInfo', [InfoController::class, 'getInfo'])
+    ->name('info.getInfo');
 
 // GameController
 Route::get('/game', [GameController::class, 'index'])

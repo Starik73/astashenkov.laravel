@@ -14,4 +14,19 @@
         @endif
     </section>
     <!-- END section -->
+    <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(event) {
+        console.log('ready');
+        $(function() {
+            $.ajax({
+                method: "GET",
+                url: "{{ route('info.getInfo') }}",
+                success: function(result) {
+                    $('h1').html( result );
+                    console.log(result);
+                },
+            });
+        });
+    });
+    </script>
 </x-site-layout>
